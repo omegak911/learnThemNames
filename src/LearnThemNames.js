@@ -6,72 +6,78 @@ class LearnThemNames extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      students: [
+           students: [
         {
-          name: 'Alex',
-          position: '-190px -180px'
+          name: 'Aqil',
+          position: '-120px -70px',
+          pronunciation: 'ah-keel'
         },
         {
-          name: 'Andrew',
-          position: '-500px -180px'
+          name: 'Bryan',
+          position: '-460px -70px',
         },
         {
-          name: 'Daniel',
-          position: '-830px -180px'
+          name: 'Bryant',
+          position: '-810px -70px',
         },
         {
-          name: 'Dustin',
-          position: '-1160px -200px'
+          name: 'Caroline',
+          position: '-1140px -70px',
         },
         {
-          name: 'Edwin',
-          position: '-190px -620px'
+          name: 'Eugenia',
+          position: '-120px -500px',
+          pronunciation: 'you-genie-uh'
         },
         {
-          name: 'Iris',
-          position: '-510px -620px'
+          name: 'Gabriella',
+          position: '-1190px -1460px',
+          nickname: 'Gaby'
         },
         {
-          name: 'Jay',
-          position: '-820px -620px'
+          name: 'Jennifer',
+          position: '-810px -1460px',
         },
         {
-          name: 'JingJing',
-          position: '-1160px -640px',
-          nickname: 'JJ'
+          name: 'Jun',
+          position: '-480px -500px',
+          pronunciation: 'jyun'
         },
         {
-          name: 'Jonathan',
-          position: '-170px -1060px'
+          name: 'Justin',
+          position: '-810px -500px',
+        },
+        {
+          name: 'Kweon',
+          position: '-120px -1000px',
+          pronunciation: 'kwon',
+          nickname: 'Michael'
         },
         {
           name: 'Mali',
-          position: '-500px -1060px'
+          position: '-1150px -500px',
         },
         {
-          name: 'Martin',
-          position: '-830px -1060px'
-        },
-        {
-          name: 'Mitch',
-          position: '-1170px -1100px'
-        },
-        {
-          name: 'Sasha',
-          position: '-150px -1500px'
+          name: 'Mina',
+          position: '-460px -1000px',
+          pronunciation: 'mee-na'
         },
         {
           name: 'Scott',
-          position: '-490px -1500px'
+          position: '-810px -1000px',
         },
         {
-          name: 'Sris',
-          position: '-830px -1500px',
-          pronunciation: 'sir-iss'
+          name: 'Steven',
+          position: '-1170px -1000px',
         },
         {
-          name: 'Tommy',
-          position: '-1170px -1500px'
+          name: 'Taylor',
+          position: '-120px -1460px',
+        },
+        {
+          name: 'Xialin',
+          position: '-460px -1460px',
+          pronunciation: 'sha-lin'
         },
       ],
       mutateStudents: [],
