@@ -1,83 +1,96 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-
 class LearnThemNames extends Component {
   constructor(props) {
     super(props);
     this.state = {
-           students: [
+      students: [
         {
-          name: 'Aqil',
-          position: '-120px -70px',
-          pronunciation: 'ah-keel'
+          name: 'Wendy',
+          position: '-690px -450px',
         },
         {
-          name: 'Bryan',
-          position: '-460px -70px',
+          name: 'Gaby',
+          position: '-1210px -450px',
         },
         {
-          name: 'Bryant',
-          position: '-810px -70px',
+          name: 'Nate',
+          position: '-1670px -450px',
         },
         {
-          name: 'Caroline',
-          position: '-1140px -70px',
+          name: 'Jeff',
+          position: '-270px -1050px',
         },
         {
-          name: 'Eugenia',
-          position: '-120px -500px',
-          pronunciation: 'you-genie-uh'
+          name: 'Anne',
+          position: '-710px -1050px',
         },
         {
-          name: 'Gabriella',
-          position: '-1190px -1460px',
-          nickname: 'Gaby'
+          name: 'Albert',
+          position: '-1215px -1050px',
         },
         {
-          name: 'Jennifer',
-          position: '-810px -1460px',
+          name: 'Uttej',
+          position: '-1695px -1050px',
+          pronunciation: 'u-tej'
         },
         {
-          name: 'Jun',
-          position: '-480px -500px',
-          pronunciation: 'jyun'
+          name: 'Liezel',
+          position: '-2140px -1050px',
+          pronunciation: 'liz-elle'
         },
         {
           name: 'Justin',
-          position: '-810px -500px',
+          position: '-250px -1630px',
         },
         {
-          name: 'Kweon',
-          position: '-120px -1000px',
-          pronunciation: 'kwon',
-          nickname: 'Michael'
+          name: 'Fred',
+          position: '-690px -1630px',
         },
         {
-          name: 'Mali',
-          position: '-1150px -500px',
+          name: 'Anthony',
+          position: '-1215px -1630px',
         },
         {
-          name: 'Mina',
-          position: '-460px -1000px',
-          pronunciation: 'mee-na'
+          name: 'Jeff',
+          position: '-1715px -1630px',
         },
         {
-          name: 'Scott',
-          position: '-810px -1000px',
+          name: 'Charlie',
+          position: '-2160px -1630px',
         },
         {
-          name: 'Steven',
-          position: '-1170px -1000px',
+          name: 'Jesse',
+          position: '-240px -2160px',
         },
         {
-          name: 'Taylor',
-          position: '-120px -1460px',
+          name: 'Daniel',
+          position: '-670px -2160px',
         },
         {
-          name: 'Xialin',
-          position: '-460px -1460px',
-          pronunciation: 'sha-lin'
+          name: 'Harrison',
+          position: '-1215px -2160px',
+        },
+        {
+          name: 'Adam',
+          position: '-1725px -2205px',
+        },
+        {
+          name: 'Matt',
+          position: '-2155px -2205px',
+        },
+        {
+          name: 'Calvin',
+          position: '-670px -2715px',
+        },
+        {
+          name: 'Tracy',
+          position: '-1220px -2790px',
+        },
+        {
+          name: 'Celia',
+          position: '-1720px -2790px',
         },
       ],
       mutateStudents: [],
@@ -175,9 +188,9 @@ const StyledColumns = styled.div`
 
 const StyledImg = styled.div`
   background-repeat: no-repeat;
-  background-size: 1500px;
-  height: 200px;
-  width: 180px;
+  background-size: 900%;
+  height: 320px;
+  width: 280px;
 `
 
 export default LearnThemNames;

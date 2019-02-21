@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LearnThemNames from './LearnThemNames';
-import image from './asset/HRLA27.jpg';
+import image from './asset/HRLA28.jpg';
 
 ReactDOM.render(<LearnThemNames image={image}/>, document.getElementById('root'));
