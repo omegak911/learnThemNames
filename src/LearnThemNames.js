@@ -7,91 +7,71 @@ class LearnThemNames extends Component {
     this.state = {
       students: [
         {
-          name: 'Wendy',
-          position: '-690px -450px',
-        },
-        {
-          name: 'Gaby',
-          position: '-1210px -450px',
-        },
-        {
-          name: 'Nate',
-          position: '-1670px -450px',
-        },
-        {
-          name: 'Jeff',
-          position: '-270px -1050px',
-        },
-        {
-          name: 'Anne',
-          position: '-710px -1050px',
-        },
-        {
-          name: 'Albert',
-          position: '-1215px -1050px',
-        },
-        {
-          name: 'Uttej',
-          position: '-1695px -1050px',
-          pronunciation: 'u-tej'
-        },
-        {
-          name: 'Liezel',
-          position: '-2140px -1050px',
-          pronunciation: 'liz-elle'
-        },
-        {
-          name: 'Justin',
-          position: '-250px -1630px',
-        },
-        {
-          name: 'Fred',
-          position: '-690px -1630px',
-        },
-        {
-          name: 'Anthony',
-          position: '-1215px -1630px',
-        },
-        {
-          name: 'Jeff',
-          position: '-1715px -1630px',
-        },
-        {
-          name: 'Charlie',
-          position: '-2160px -1630px',
-        },
-        {
-          name: 'Jesse',
-          position: '-240px -2160px',
-        },
-        {
-          name: 'Daniel',
-          position: '-670px -2160px',
-        },
-        {
-          name: 'Harrison',
-          position: '-1215px -2160px',
-        },
-        {
-          name: 'Adam',
-          position: '-1725px -2205px',
-        },
-        {
-          name: 'Matt',
-          position: '-2155px -2205px',
+          name: 'Angela',
+          position: '-0px -450px',
         },
         {
           name: 'Calvin',
-          position: '-670px -2715px',
+          position: '-500px -450px',
         },
         {
-          name: 'Tracy',
-          position: '-1220px -2790px',
+          name: 'Dustin',
+          position: '-1000px -450px',
         },
         {
-          name: 'Celia',
-          position: '-1720px -2790px',
+          name: 'Gaby',
+          position: '-1550px -450px',
         },
+        {
+          name: 'James',
+          position: '-0px -1250px',
+        },
+        {
+          name: 'Jeff',
+          position: '-500px -1250px',
+        },
+        {
+          name: 'Kathleen',
+          position: '-1030px -1250px',
+        },
+        {
+          name: 'Li',
+          position: '-1560px -1250px',
+        },
+        {
+          name: 'Mark',
+          position: '-50px -530px',
+        },
+        {
+          name: 'Matthew',
+          position: '-550px -530px',
+        },
+        {
+          name: 'Matthew',
+          position: '-1000px -530px',
+        },
+        {
+          name: 'Morgan',
+          position: '-1500px -530px',
+        },
+        {
+          name: 'Ramin',
+          position: '-50px -1230px',
+          pronunciation: 'Raw-meen'
+        },
+        {
+          name: 'Ufuk',
+          position: '-550px -1230px',
+          pronunciation: 'U-fook'
+        },
+        {
+          name: 'Wayne',
+          position: '-1000px -1230px',
+        },
+        {
+          name: 'Wendy',
+          position: '-1500px -1230px',
+        }
       ],
       mutateStudents: [],
       currentStudent: null,
@@ -139,14 +119,15 @@ class LearnThemNames extends Component {
   }
 
   render() {
-    let { image } = this.props;
+    let { image1, image2, dog } = this.props;
     let { currentStudent, guess, validateGuess } = this.state;
     return (
       <div>
         <br/>
         {currentStudent ?
         <StyledColumns>
-          <StyledImg style={{ backgroundImage: `url(${image})`, backgroundPosition: currentStudent.position }} alt="studentImage"/>
+          {/* probably render image based on first letter of name and weight of letter */}
+          <StyledImg style={{ backgroundImage: `url(${currentStudent.name[0].charCodeAt() < 77 ? image1 : image2})`, backgroundPosition: currentStudent.position }} alt="studentImage"/>
           {validateGuess &&
           <div>
             {guess.toLowerCase() === currentStudent.name.toLowerCase() ? 
@@ -172,6 +153,24 @@ class LearnThemNames extends Component {
         :
         <StyledColumns>
           <button type="button" onClick={this.randomizer}>RESET</button>
+          <StyledImg style={{ backgroundImage: `url(${dog})`, backgroundSize: 'contain' }} alt="studentImage"/>
+          <form action="" onSubmit={this.submitGuess}>
+            <input type="text" value={guess} onChange={this.updateGuess}/>
+            <button type="submit" onClick={this.submitGuess}>GUESS</button>
+          </form>
+          {validateGuess &&
+            <div>
+              {guess.toLowerCase() === 'nightwing' ? 
+              <div>
+                You got it!  It's Nightwing
+              </div>
+              :
+              <div>
+                I'm sad you don't know my name is Nightwing
+              </div>
+              }
+            </div>
+          }
         </StyledColumns>
         }
       </div>
@@ -188,7 +187,7 @@ const StyledColumns = styled.div`
 
 const StyledImg = styled.div`
   background-repeat: no-repeat;
-  background-size: 900%;
+  background-size: 700%;
   height: 320px;
   width: 280px;
 `
