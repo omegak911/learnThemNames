@@ -8,18 +8,19 @@ class LearnThemNames extends Component {
     this.state = {
       students: students,
       mutateStudents: [],
-      currentStudent: students[0],
+      currentStudent: null,
       guess: '',
       validateGuess: false,
-      specialName: {
+      specialGuest: {
         name: 'pikachu',
-        position: '0px 0px'
+        positionGuess: '0px 110px',
+        positionSolution: '0px -210px',
       }
     }
   }
 
   componentDidMount() {
-    // this.randomizer();
+    this.randomizer();
   }
 
   randomizer = () => {
@@ -83,8 +84,8 @@ class LearnThemNames extends Component {
   }
 
   renderSpecialGuessResult = () => {
-    let { guess, specialName } = this.state;
-    return guess.toLowerCase() === specialName ?
+    let { guess, specialGuest } = this.state;
+    return guess.toLowerCase() === specialGuest.name ?
       <div>
         You got it!  It's Pikachu
       </div>
@@ -96,7 +97,7 @@ class LearnThemNames extends Component {
 
   render() {
     let { image, pokemon } = this.props;
-    let { currentStudent, guess, validateGuess } = this.state;
+    let { currentStudent, guess, validateGuess, specialGuest } = this.state;
     return (
       <div>
         <br/>
@@ -122,14 +123,18 @@ class LearnThemNames extends Component {
           <button type="button" onClick={this.randomizer}>RESET</button>
           <StyledImg style={{ 
             backgroundImage: `url(${pokemon})`, 
-            backgroundSize: 'contain' }} 
+            backgroundSize: '165%',
+            backgroundPosition: validateGuess ? specialGuest.positionSolution : specialGuest.positionGuess
+            }}
             alt="studentImage"
           />
+
+          {validateGuess && this.renderSpecialGuessResult()}
+          
           <form action="" onSubmit={this.submitGuess}>
             <input type="text" value={guess} onChange={this.updateGuess}/>
             <button type="submit" onClick={this.submitGuess}>GUESS</button>
           </form>
-          {validateGuess && this.renderSpecialGuessResult()}
 
         </StyledColumns>
         }
