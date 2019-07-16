@@ -1,54 +1,38 @@
 export default [
   {
-    name: 'Amanda',
-    position: '-860px -540px',
-  },
-  {
-    name: 'Andy',
-    position: '-520px -1800px',
+    name: 'Aaron',
+    position: '-40px -150px',
   },
   {
     name: 'Arthur',
-    position: '-460px -340px',
+    position: '-840px -150px',
   },
   {
-    name: 'Chris',
-    position: '-90px -500px',
+    name: 'Bill',
+    position: '-1640px -150px',
   },
   {
-    name: 'Erik',
-    position: '-0px -990px',
+    name: 'Dennis',
+    position: '-40px -1150px',
   },
   {
-    name: 'Janice',
-    position: '-160px -1450px',
+    name: 'Emily',
+    position: '-840px -1150px',
   },
   {
-    name: 'Jeremy',
-    position: '-1210px -340px',
+    name: 'Ji',
+    position: '-1640px -1150px',
   },
   {
-    name: 'Kirk',
-    position: '-830px -2050px',
+    name: 'Mike',
+    position: '-40px -2050px',
   },
   {
-    name: 'Kristina',
-    position: '-1570px -530px',
+    name: 'Paul',
+    position: '-840px -2050px',
   },
   {
-    name: 'Moiz',
-    position: '-1470px -1450px',
-  },
-  {
-    name: 'Sam',
-    position: '-1670px -1000px',
-  },
-  {
-    name: 'Tim',
-    position: '-1150px -1800px',
-  },
-  {
-    name: 'Wayne',
-    position: '-820px -1200px',
+    name: 'Vivian',
+    position: '-1590px -2150px',
   }
 ]
